@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "./protoStructs";
+
+message KeyRing {
+  string name = 1;
+  string uid = 2;
+  string rootKey = 3;
+  map<string, string> keys = 4;
+}
+
+message Config {
+  string name = 1;
+  string uid = 2;
+  int32 version = 3;
+  int32 keyring_version = 4;
+  int32 shards = 5;
+  int32 threshold = 6;
+}
